@@ -9,11 +9,11 @@
 
             if (x > y)
             {
-                Console.WriteLine("Первое число " + x + " больше чем второе " + y);
+                Console.WriteLine("max= " + x );
             }
             else
             {
-                Console.WriteLine("Второе число " + y + " больше чем первое " + x);
+                Console.WriteLine("max= " + y );
             }
  // Задача 4: Напишите программу, которая принимает на вход три числа и выдаёт максимальное из этих чисел.
 
@@ -37,19 +37,46 @@
                 max = n3;
             }
 
-            Console.WriteLine("Самое большое из введённых чисел: " + max);
+            Console.WriteLine("max= " + max);
 // Задача 6: Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
 
             Console.WriteLine("Задача 6: Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).");
             Console.WriteLine("Введите число:");
-            n = Convert.ToInt32(Console.ReadLine());
+            int n = Convert.ToInt32(Console.ReadLine());
+            if (n < 0)
+            {
+                n= n * -1;
+            }
 
             if (n % 2 == 1)
             {
-                Console.WriteLine("Число " + n + " нечетное");
+                Console.WriteLine("нет");
             }
             else
             {
-                Console.WriteLine("Число " + n + "четное");
+                Console.WriteLine("да");
             } 
+// Задача 8: Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
 
+            Console.WriteLine("Задача 8: Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.");
+            Console.WriteLine("Введите число:");
+            int num = Convert.ToInt32(Console.ReadLine());
+            int i = 1;
+            if (num <= 1)
+            {
+                Console.WriteLine("Нет чётных чисел!");
+            }
+            else
+            {
+            Console.WriteLine("Чётные числа от 1 до " + num);
+            while (i <= num)
+            {
+                if (i % 2 != 1)
+                {
+                    Console.Write(i + ", ");
+                }
+                i++;
+            }
+            }
+
+        
